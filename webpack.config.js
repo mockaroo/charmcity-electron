@@ -2,19 +2,20 @@
 // such as electron, app, and remote.
 const webpackTargetElectronRenderer = require('webpack-target-electron-renderer');
 
-const config = {
-    watch: true,
-    entry: "./browser/index.js",
-    output: {
-        filename: "bundle.js"
-    },
-    module: {
-        loaders: [
-            { test: /\.css$/, loader: "style!css" }
-        ]
-    }
+module.exports = function(watch) {
+    const config = {
+        watch: watch,
+        entry: "./browser/index.js",
+        output: {
+            filename: "bundle.js"
+        },
+        module: {
+            loaders: [
+                { test: /\.css$/, loader: "style!css" }
+            ]
+        }
+    };
+
+    config.target = webpackTargetElectronRenderer(config);
+    return config;
 };
-
-config.target = webpackTargetElectronRenderer(config);
-
-module.exports = config;
