@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.toolbar, #status {
+    background-color: #303030;
+    padding: 10px;
+    color: #D0D0D0;
+}
+
+#status {
+    height: 1em;
+    font-size: 13px;
+    text-align: right;
+}
+
+.toolbar button {
+    font-size: 13px;
+    color: #F0F0F0;
+    background-color: #505050;
+    border: 1px solid #101010;
+    width: 90px;
+    padding: 7px 0;
+    border-radius: 40px;
+}
+
+.toolbar button:hover {
+    color: #FFF;
+    background-color: #606060;
+    border: 1px solid #202020;
+    cursor: pointer;
+}
+
+#editor {
+   flex: 1;
+}

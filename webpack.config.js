@@ -17,5 +17,6 @@ module.exports = function(watch) {
     };
 
     config.target = webpackTargetElectronRenderer(config);
+    
     return config;
 };

@@ -1,19 +1,25 @@
 'use strict';
 
 !function() {
+    // import ace, mode, and theme
     const ace = require('brace');
     require('brace/mode/javascript');
     require('brace/theme/monokai');
 
+    // create the editor
     const editor = ace.edit('editor');
     editor.getSession().setMode('ace/mode/javascript');
     editor.setTheme('ace/theme/monokai');
 
+    // get a hold of the bottom status bar
     const status = document.querySelector('#status');
 
-    const fs = require('fs');
-    const dialog = require('remote').dialog;
-    const ipcRenderer = require('electron').ipcRenderer;
+    // now the real magic begins - load node modules in the renderer process!
+    const fs = require('fs'); // file system access directly from browser code!
+    const dialog = require('remote').dialog; // access native file picker dialog
+    const ipcRenderer = require('electron').ipcRenderer; // listen for messages from the main process
+
+    // keep track of the open file
     let file;
 
     /**
