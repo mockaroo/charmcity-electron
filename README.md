@@ -6,6 +6,7 @@ shown at [charmCityJS](http://charmcityjs.com).
 ## Develop
 
     npm install
+    npm install --g electron-prebuilt gulp
     gulp build-dev
     npm start
 
