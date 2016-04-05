@@ -1,5 +1,8 @@
 'use strict';
 
+// This is the main file that runs when electron starts.  It sets up the native OS menus and events and launches
+// the UI by creating a BrowserWindow.
+
 const electron = require('electron');
 const app = electron.app;
 const Tray = electron.Tray;
@@ -32,7 +35,7 @@ app.on('ready', () => {
     Menu.setApplicationMenu(menu);
 
     // Create a tray icon, because we can
-    const appIcon = new Tray(path.join('resources', 'tray.png'));
+    const appIcon = new Tray(path.join(__dirname, '..', 'resources', 'tray.png'));
     appIcon.setToolTip('This is charmCity-electron!');
     appIcon.setContextMenu(Menu.buildFromTemplate([
         { label: 'Open File...', click: () => mainWindow.webContents.send('open') }

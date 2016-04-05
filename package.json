@@ -2,7 +2,7 @@
   "name": "charmcity-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "main/main.js",
+  "main": "src/main/main.js",
   "scripts": {
     "start": "electron . --dev"
   },
@@ -14,7 +14,10 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-electron": "0.0.10",
+    "gulp-install": "^0.6.0",
     "gulp-webpack": "^1.5.0",
+    "rimraf": "^2.5.2",
     "webpack-target-electron-renderer": "^0.4.0"
   }
 }

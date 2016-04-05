@@ -12,4 +12,4 @@ shown at [charmCityJS](http://charmcityjs.com).
 
 ## Package as an app
 
-    gulp build
+    gulp package

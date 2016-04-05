@@ -1,4 +1,7 @@
 .idea
 node_modules
-/browser/bundle.js
+/src/renderer/bundle.js
+/build
+/release
+/cache
 .DS_Store
