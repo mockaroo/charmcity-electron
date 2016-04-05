@@ -5,7 +5,7 @@ const webpackTargetElectronRenderer = require('webpack-target-electron-renderer'
 module.exports = function(watch) {
     const config = {
         watch: watch,
-        entry: "./browser/index.js",
+        entry: "./renderer/index.js",
         output: {
             filename: "bundle.js"
         },

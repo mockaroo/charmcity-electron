@@ -2,7 +2,7 @@
   "name": "charmcity-electron",
   "version": "1.0.0",
   "description": "",
-  "main": "app/main.js",
+  "main": "main/main.js",
   "scripts": {
     "start": "electron . --dev"
   },
