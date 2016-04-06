@@ -36,8 +36,9 @@ function open(fileToOpen) {
             if (error) {
                 new Notification('charmCity-electron', { body: `Could not open ${f} : ${error}` });
             } else {
+                document.getElementById('filename').innerHTML = ` | ${f}`
                 app.addRecentDocument(f); // add to the native OS recent documents list in the dock
-                new Notification('charmCity-electron', { body: `Opened ${f}.` });
+                // new Notification('charmCity-electron', { body: `Opened ${f}.` });
                 editor.setValue(contents);
             }
         });

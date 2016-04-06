@@ -14,7 +14,12 @@ let mainWindow, menu, template;
 
 app.on('ready', () => {
     // create a browser window for the UI
-    mainWindow = new BrowserWindow({ width: 1024, height: 728 });
+    mainWindow = new BrowserWindow({
+        width: 1024,
+        height: 728,
+        'titleBarStyle': 'hidden-inset'
+    });
+    
     mainWindow.loadURL(`file://${__dirname}/../renderer/index.html`);
 
     // open chrome debugger if --dev is specified

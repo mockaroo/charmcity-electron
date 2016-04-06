@@ -2,7 +2,21 @@ body {
     margin: 0;
     padding: 0;
     background-color: #303030;
-    font-family: 'Helvetica Neue', 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+body, button, .header {
+    font-family: "Century Gothic";
+}
+
+#filename {
+    color: #aaa;
+}
+
+.header {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
 
 .container {
@@ -31,7 +45,7 @@ body {
     border: 1px solid #101010;
     width: 90px;
     padding: 7px 0;
-    border-radius: 40px;
+    border-radius: 5px;
 }
 
 .toolbar button:hover {
