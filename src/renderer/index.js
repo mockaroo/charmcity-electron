@@ -4,8 +4,8 @@
 
 // now the real magic begins - load node modules in the renderer process!
 const fs = require('fs'); // file system access directly from browser code!
-const remote = require('remote');
-const app = remote.require('app');
+const remote = require('electron').remote;
+const app = remote.app;
 const dialog = remote.dialog; // access native file picker dialog
 const ipcRenderer = require('electron').ipcRenderer; // listen for messages from the main process
 
